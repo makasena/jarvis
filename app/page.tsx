@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { ChevronDown, ExternalLink, Menu } from "lucide-react"
+import { ChevronDown, Menu } from "lucide-react"
 import { ScrollAnimation } from "@/components/scroll-animation"
 import { ParallaxSection } from "@/components/parallax-section"
 import { InteractiveButton } from "@/components/interactive-button"
@@ -265,7 +265,7 @@ export default function JarvisCompanions() {
 
                     <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 text-center w-full">
                       {[
-                        { value: "18", label: "TOTAL SUPPLY" },
+                        { value: "1B", label: "TOTAL SUPPLY" },
                         { value: "0%", label: "TAX" },
                         { value: "LP", label: "BURNT" },
                       ].map((item, index) => (
@@ -400,21 +400,28 @@ export default function JarvisCompanions() {
           </ScrollAnimation>
 
           <ScrollAnimation delay={300}>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-12 sm:mb-16 max-w-2xl mx-auto">
               {[
-                { name: "TELEGRAM", href: "#" },
-                { name: "X", href: "#" },
-                { name: "DEXTOOLS", href: "#" },
-                { name: "DEXSCREENER", href: "#" },
+                {
+                  name: "TELEGRAM",
+                  href: "#",
+                  hoverColor: "hover:from-blue-500 hover:to-blue-600",
+                },
+                {
+                  name: "TWITTER",
+                  href: "#",
+                  hoverColor: "hover:from-blue-400 hover:to-blue-500",
+                },
               ].map((social, index) => (
                 <ScrollAnimation key={social.name} delay={index * 100}>
                   <InteractiveButton
-                    className="bg-gradient-to-r from-gray-800 to-gray-700 hover:from-cyan-600 hover:to-blue-600 text-white border-0 p-4 sm:p-6 text-sm sm:text-base lg:text-lg font-bold w-full"
+                    className={`bg-gradient-to-r from-gray-800 to-gray-700 ${social.hoverColor} text-white border-0 p-6 sm:p-8 text-base sm:text-lg lg:text-xl font-bold w-full transition-all duration-300 group`}
                     href={social.href}
                   >
-                    <div className="flex flex-col items-center space-y-2">
-                      <span className="text-center">{social.name}</span>
-                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className="flex items-center justify-center">
+                      <span className="text-center font-bold tracking-wider text-xl sm:text-2xl lg:text-3xl">
+                        {social.name}
+                      </span>
                     </div>
                   </InteractiveButton>
                 </ScrollAnimation>
