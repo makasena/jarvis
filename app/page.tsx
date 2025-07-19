@@ -199,7 +199,7 @@ export default function Component() {
           <h2 className="mb-8 text-4xl font-bold sm:text-5xl md:text-6xl text-blue-600">Buy $TANUKI</h2>
           <p className="text-lg md:text-xl mb-12">Ready to join the Tanuki family? Get your $TANUKI tokens now!</p>
           <a
-            href="https://apester.com/your-tanuki-store-link" // Placeholder link, replace with actual Ape Store link
+            href="https://ape.store/base/0x2997142110edfd3398320561296ea8f64ecedc1c" // Updated Ape Store link
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 rounded-full bg-blue-600 px-10 py-5 text-xl font-semibold text-white shadow-lg transition-colors hover:bg-blue-700"
@@ -207,9 +207,7 @@ export default function Component() {
             <ShoppingCartIcon className="h-7 w-7" />
             BUY TANOKI ON APE STORE
           </a>
-          <p className="mt-8 text-sm text-gray-600">
-            (Note: This is a placeholder link. Please replace with the actual link to buy $TANUKI.)
-          </p>
+          {/* Removed the placeholder note */}
         </div>
       </section>
 
