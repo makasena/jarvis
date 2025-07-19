@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { CheckCircleIcon, RocketIcon, UsersIcon } from "lucide-react"
+import { CheckCircleIcon, RocketIcon, UsersIcon, SendIcon, TwitterIcon } from "lucide-react" // Added SendIcon and TwitterIcon
 
 export default function Component() {
   return (
@@ -123,15 +123,6 @@ export default function Component() {
         <div className="container mx-auto max-w-6xl">
           <h2 className="mb-12 text-center text-4xl font-bold sm:text-5xl md:text-6xl text-blue-600">Tokenomics</h2>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-            <div className="lg:w-1/2 text-center lg:text-left">
-              <Image
-                src="/images/tanuki-balls.jpeg"
-                alt="Tanuki with big balls, symbolizing abundance"
-                width={400}
-                height={400}
-                className="mx-auto lg:mx-0 rounded-full object-cover shadow-lg"
-              />
-            </div>
             <div className="lg:w-1/2 space-y-6">
               <p className="text-lg leading-relaxed">
                 TANUKI is designed with a fair and transparent distribution model to ensure long-term sustainability and
@@ -158,6 +149,36 @@ export default function Component() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Community Section */}
+      <section className="py-16 px-4 md:py-24 lg:py-32 bg-blue-600 text-white text-center">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-4xl font-bold sm:text-5xl md:text-6xl">Join Our Community!</h2>
+          <p className="text-lg md:text-xl mb-12">
+            Connect with fellow Tanuki enthusiasts and stay updated on the latest news and developments.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <a
+              href="https://t.me/yourtelegramlink" // Replace with actual Telegram link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-semibold text-blue-600 shadow-lg transition-colors hover:bg-gray-100"
+            >
+              <SendIcon className="h-6 w-6" />
+              Telegram
+            </a>
+            <a
+              href="https://twitter.com/yourtwitterlink" // Replace with actual Twitter link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-semibold text-blue-600 shadow-lg transition-colors hover:bg-gray-100"
+            >
+              <TwitterIcon className="h-6 w-6" />
+              Twitter
+            </a>
           </div>
         </div>
       </section>
