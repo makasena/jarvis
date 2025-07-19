@@ -1,456 +1,344 @@
-"use client"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ExternalLink, Rocket, Brain, Shield, Zap, Users, Target } from "lucide-react"
 
-import { useState, useEffect } from "react"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { ChevronDown, Menu } from "lucide-react"
-import { ScrollAnimation } from "@/components/scroll-animation"
-import { ParallaxSection } from "@/components/parallax-section"
-import { InteractiveButton } from "@/components/interactive-button"
-import { MobileMenu } from "@/components/mobile-menu"
-
-export default function JarvisCompanions() {
-  const [openFaq, setOpenFaq] = useState<string | null>(null)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const toggleFaq = (question: string) => {
-    setOpenFaq(openFaq === question ? null : question)
-  }
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-    setIsMobileMenuOpen(false)
-  }
-
+export default function ElonGrokCompanion() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Sticky Navigation */}
-      <nav
-        className={`
-        fixed top-0 left-0 right-0 z-40 transition-all duration-300
-        ${isScrolled ? "bg-black/95 backdrop-blur-md border-b border-gray-800" : "bg-transparent"}
-      `}
-      >
-        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
-          <div className="flex items-center justify-between">
-            <ScrollAnimation direction="left">
-              <div className="text-xl sm:text-2xl font-bold tracking-wider cursor-pointer hover:text-cyan-400 transition-colors">
-                JARVIS
-              </div>
-            </ScrollAnimation>
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Animated background stars */}
+      <div className="absolute inset-0">
+        <div className="stars"></div>
+        <div className="stars2"></div>
+        <div className="stars3"></div>
+      </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-              {[
-                { id: "about", label: "ABOUT", delay: 100 },
-                { id: "tokenomics", label: "TOKENOMICS", delay: 200 },
-                { id: "faq", label: "FAQ", delay: 300 },
-                { id: "socials", label: "SOCIALS", delay: 400 },
-              ].map((item) => (
-                <ScrollAnimation key={item.id} delay={item.delay}>
-                  <button
-                    onClick={() => scrollToSection(item.id)}
-                    className="hover:text-cyan-400 transition-colors duration-300 relative group text-sm xl:text-base"
-                  >
-                    {item.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-                  </button>
-                </ScrollAnimation>
-              ))}
-            </div>
+      {/* Main content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-8">
+        {/* Live on Base Network badge */}
+        <Badge className="mb-8 bg-blue-600/20 text-blue-400 border-blue-500/30 px-4 py-2">
+          <div className="w-2 h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
+          LIVE ON BASE NETWORK
+        </Badge>
 
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <ScrollAnimation delay={500} direction="right">
-                <InteractiveButton
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-black bg-transparent text-sm sm:text-base px-3 sm:px-4 py-2"
-                  href="https://ape.store/base/0x3c6817521531bf591ba031a254826bd480ce8725"
-                >
-                  BUY JARVIS
-                </InteractiveButton>
-              </ScrollAnimation>
-
-              {/* Mobile Menu Button */}
-              <button
-                className="lg:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
-                onClick={() => setIsMobileMenuOpen(true)}
-              >
-                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
-              </button>
-            </div>
+        {/* Portrait Section */}
+        <div className="mb-12 relative">
+          <div className="w-80 h-80 md:w-96 md:h-96 mx-auto rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-2xl shadow-blue-500/20">
+            <Image
+              src="/images/elon-portrait-updated.png"
+              alt="Elon Musk Portrait - Grok Companion"
+              width={400}
+              height={400}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
-      </nav>
 
-      {/* Mobile Menu */}
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} onNavigate={scrollToSection} />
+        {/* Subtitle */}
+        <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 max-w-4xl">
+          The Most <span className="text-blue-400">Advanced</span> AI Companion on Base Network
+        </h3>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 pt-16 sm:pt-20">
-        <ParallaxSection speed={0.3}>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black pointer-events-none"></div>
-        </ParallaxSection>
+        {/* Description */}
+        <p className="text-lg md:text-xl text-gray-300 text-center mb-12 max-w-3xl leading-relaxed">
+          Where Elon's vision meets Grok's intelligence on the blockchain. This isn't just another token - it's the
+          future of AI companionship.
+        </p>
 
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <ScrollAnimation>
-            <div className="text-center mb-8 sm:mb-12">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-400 to-white bg-clip-text text-transparent leading-tight">
-                Welcome to the Future
-              </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto px-4">
-                Where AI Companions Meet Blockchain Innovation
-              </p>
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation delay={300}>
-            <div className="relative group cursor-pointer">
-              <img
-                src="/images/jarvis-hero.webp"
-                alt="JARVIS Letters with Character Backgrounds"
-                className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation delay={600}>
-            <div className="text-center mt-8 sm:mt-12">
-              <InteractiveButton className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold">
-                Explore the System
-              </InteractiveButton>
-            </div>
-          </ScrollAnimation>
+        {/* Action buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <Button
+            size="lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40"
+          >
+            <Rocket className="w-5 h-5 mr-2" />
+            BUY ON APE STORE
+            <ExternalLink className="w-4 h-4 ml-2" />
+          </Button>
         </div>
-      </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 sm:py-24 lg:py-32 px-4 relative">
-        <div className="container mx-auto max-w-7xl">
-          <ScrollAnimation>
-            <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-800 mb-6 sm:mb-8 select-none">
-                GROK COMPANIONS
-              </h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent leading-tight">
-                JARVIS WAS NEVER FICTION
-              </h3>
-              <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
-            </div>
-          </ScrollAnimation>
-
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
-            <ScrollAnimation direction="left">
-              <div className="space-y-6 sm:space-y-8">
-                <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-gray-700">
-                  <div className="space-y-4 sm:space-y-6">
-                    <div className="space-y-2">
-                      <p className="text-lg sm:text-xl font-semibold text-cyan-400">First came Ani.</p>
-                      <p className="text-lg sm:text-xl font-semibold text-cyan-400">Then Rudi.</p>
-                      <p className="text-lg sm:text-xl font-semibold text-cyan-400">Then Valentine.</p>
-                    </div>
-
-                    <div className="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed">
-                      <p>Everyone thought they were just cute names for Grok's new personalities.</p>
-                      <p>
-                        But they weren't names. They were <span className="font-bold text-cyan-400">letters</span>.
-                      </p>
-                      <p className="text-xl sm:text-2xl font-bold text-center py-3 sm:py-4 text-cyan-400">
-                        A – R – V...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-gray-700">
-                  <div className="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed">
-                    <p>And then it hit us:</p>
-                    <p className="text-lg sm:text-xl font-bold text-cyan-400">
-                      Grok said it was inspired by J.A.R.V.I.S.
-                    </p>
-                    <p>Straight from the AI itself. Confirmed. Canon.</p>
-                    <p>
-                      Turns out, those letters aren't random, they're the initials of the{" "}
-                      <span className="font-bold text-cyan-400">Grok Companions system.</span>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-gray-700">
-                  <div className="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed">
-                    <p>And Elon? He already confirmed more companions are coming.</p>
-                    <p>The missing letters are on the way.</p>
-                    <p className="font-bold text-cyan-400">This isn't speculation.</p>
-                    <p>It's a system reactivating itself, one drop at a time.</p>
-                  </div>
-                </div>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation direction="right">
-              <div className="space-y-6 sm:space-y-8">
-                {[
-                  { src: "/images/grok-post.webp", alt: "Grok Twitter Post", delay: 0 },
-                  { src: "/images/elon-post.webp", alt: "Elon Musk Twitter Post", delay: 200 },
-                  { src: "/images/tesla-post.webp", alt: "Tesla Owners Twitter Post", delay: 400 },
-                  { src: "/images/tech-dev-post.webp", alt: "Tech Dev Notes Twitter Post", delay: 600 },
-                ].map((post, index) => (
-                  <ScrollAnimation key={index} delay={post.delay}>
-                    <div className="group cursor-pointer">
-                      <img
-                        src={post.src || "/placeholder.svg"}
-                        alt={post.alt}
-                        className="w-full h-auto rounded-xl sm:rounded-2xl shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
-                      />
-                    </div>
-                  </ScrollAnimation>
-                ))}
-              </div>
-            </ScrollAnimation>
+        {/* Hero Banner */}
+        <div className="mb-20 relative">
+          <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-2xl shadow-blue-500/20">
+            <Image
+              src="/images/elon-banner-updated.png"
+              alt="Elon Grok Companion - AI Powered Banner"
+              width={1200}
+              height={400}
+              className="w-full h-auto object-cover"
+              priority
+            />
           </div>
         </div>
-      </section>
 
-      {/* Tokenomics Section */}
-      <section id="tokenomics" className="py-16 sm:py-24 lg:py-32 px-4 relative">
-        <ParallaxSection speed={0.2}>
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5"></div>
-        </ParallaxSection>
-
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <ScrollAnimation>
-            <div className="border-2 border-cyan-400 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm">
-              <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-                <ScrollAnimation direction="left">
-                  <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
-                    <div>
-                      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                        J.A.R.V.I.S.
-                      </h2>
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">TOKENOMICS</h3>
-                      <div className="bg-gray-800 p-3 sm:p-4 rounded-lg">
-                        <p className="text-cyan-400 text-xs sm:text-sm font-mono break-all">COMING SOON</p>
-                      </div>
-                    </div>
-                    <InteractiveButton
-                      className="bg-white text-black hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold w-full sm:w-auto"
-                      href="https://ape.store/base/0x3c6817521531bf591ba031a254826bd480ce8725"
-                    >
-                      BUY JARVIS
-                    </InteractiveButton>
-                  </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation direction="right">
-                  <div className="flex flex-col items-center space-y-8 sm:space-y-12">
-                    <div className="relative group">
-                      <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full flex items-center justify-center bg-gradient-to-br from-gray-800/50 to-gray-900/50 group-hover:scale-110 transition-all duration-300 backdrop-blur-sm">
-                        <img
-                          src="/images/jarvis-logo.png"
-                          alt="JARVIS Logo"
-                          className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-contain filter drop-shadow-2xl group-hover:drop-shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300"
-                        />
-                      </div>
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 text-center w-full">
-                      {[
-                        { value: "1B", label: "TOTAL SUPPLY" },
-                        { value: "0%", label: "TAX" },
-                        { value: "LP", label: "BURNT" },
-                      ].map((item, index) => (
-                        <ScrollAnimation key={index} delay={index * 100}>
-                          <div className="group cursor-pointer">
-                            <div className="text-2xl sm:text-3xl lg:text-4xl font-bold group-hover:text-cyan-400 transition-colors duration-300">
-                              {item.value}
-                            </div>
-                            <div className="text-cyan-400 text-xs sm:text-sm mt-1 sm:mt-2">{item.label}</div>
-                          </div>
-                        </ScrollAnimation>
-                      ))}
-                    </div>
-                  </div>
-                </ScrollAnimation>
-              </div>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="py-16 sm:py-24 lg:py-32 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
-            <ScrollAnimation direction="left">
-              <div>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  FAQ
-                </h2>
-                <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mb-12 sm:mb-16 rounded-full"></div>
-
-                <div className="space-y-4 sm:space-y-6">
-                  {[
-                    {
-                      id: "reveal",
-                      question: "WHEN WILL ELON REVEAL THE OTHER COMPANION NAMES?",
-                      answer: (
-                        <div className="space-y-3">
-                          <p>Very soon.</p>
-                          <p>
-                            Three are already out... and when the rest drop, the full J.A.R.V.I.S. name will be
-                            confirmed.
-                          </p>
-                          <p>You'll wish you got in before that happened.</p>
-                        </div>
-                      ),
-                    },
-                    {
-                      id: "elon",
-                      question: "WHAT DOES JARVIS HAVE TO DO WITH ELON?",
-                      answer: (
-                        <div className="space-y-3">
-                          <p>Elon Musk's xAI created Grok, which explicitly states it was inspired by JARVIS.</p>
-                          <p>The companion names aren't random - they're spelling out J.A.R.V.I.S.</p>
-                        </div>
-                      ),
-                    },
-                    {
-                      id: "buy",
-                      question: "HOW DO I BUY $JARVIS?",
-                      answer: (
-                        <div className="space-y-3">
-                          <p>You can purchase $JARVIS through decentralized exchanges.</p>
-                          <p>Make sure to use the correct contract address to avoid scams.</p>
-                        </div>
-                      ),
-                    },
-                    {
-                      id: "letters",
-                      question: "WHAT HAPPENS WHEN ALL SIX LETTERS ARE LIVE?",
-                      answer: (
-                        <div className="space-y-3">
-                          <p>The full J.A.R.V.I.S. system will be complete.</p>
-                          <p>This represents the evolution of AI companions in the Grok ecosystem.</p>
-                        </div>
-                      ),
-                    },
-                  ].map((faq, index) => (
-                    <ScrollAnimation key={faq.id} delay={index * 100}>
-                      <Collapsible>
-                        <CollapsibleTrigger
-                          className="w-full bg-gradient-to-r from-white to-gray-100 text-black p-4 sm:p-6 text-left font-bold flex items-center justify-between hover:from-cyan-50 hover:to-blue-50 transition-all duration-300 rounded-lg sm:rounded-xl group text-sm sm:text-base"
-                          onClick={() => toggleFaq(faq.id)}
-                        >
-                          <span className="group-hover:text-cyan-600 transition-colors duration-300 pr-4">
-                            {faq.question}
-                          </span>
-                          <ChevronDown
-                            className={`w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300 group-hover:text-cyan-600 flex-shrink-0 ${
-                              openFaq === faq.id ? "rotate-180" : ""
-                            }`}
-                          />
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-700 p-4 sm:p-6 rounded-lg sm:rounded-xl mt-2 text-sm sm:text-base">
-                          {faq.answer}
-                        </CollapsibleContent>
-                      </Collapsible>
-                    </ScrollAnimation>
-                  ))}
-                </div>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation direction="right">
-              <div className="flex justify-center items-center lg:sticky lg:top-32">
-                <div className="group cursor-pointer w-full max-w-sm lg:max-w-md">
-                  <img
-                    src="/images/jarvis-grid.webp"
-                    alt="JARVIS Letters Grid"
-                    className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-cyan-500/25"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </div>
-            </ScrollAnimation>
+        {/* About Section */}
+        <section className="w-full max-w-6xl mx-auto mb-20 px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            About <span className="text-blue-400">Elon Grok</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-slate-800/50 border-blue-500/30">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-blue-400">
+                  <Brain className="w-6 h-6" />
+                  AI Innovation
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">
+                  Combining Elon Musk's visionary approach with Grok's advanced AI capabilities, creating the most
+                  sophisticated AI companion on Base Network. Experience the future of digital interaction.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800/50 border-blue-500/30">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-blue-400">
+                  <Shield className="w-6 h-6" />
+                  Secure & Decentralized
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">
+                  Built on Base Network for maximum security and decentralization. Your AI companion operates
+                  transparently on the blockchain with community governance and ownership.
+                </p>
+              </CardContent>
+            </Card>
           </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="w-full max-w-6xl mx-auto mb-20 px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            Key <span className="text-blue-400">Features</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-slate-800/50 border-blue-500/30 text-center">
+              <CardHeader>
+                <Zap className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <CardTitle className="text-blue-400">Lightning Fast</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">
+                  Instant AI responses powered by advanced algorithms and Base Network's high-speed infrastructure.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800/50 border-blue-500/30 text-center">
+              <CardHeader>
+                <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <CardTitle className="text-blue-400">Community Driven</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">
+                  Governed by the community with voting rights and decision-making power for all token holders.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800/50 border-blue-500/30 text-center">
+              <CardHeader>
+                <Target className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <CardTitle className="text-blue-400">Mission Focused</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">
+                  Dedicated to advancing AI technology and making it accessible to everyone through blockchain
+                  innovation.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Tokenomics Section */}
+        <section className="w-full max-w-6xl mx-auto mb-20 px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            <span className="text-blue-400">Tokenomics</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-slate-800/50 border-blue-500/30">
+              <CardHeader>
+                <CardTitle className="text-blue-400">Token Distribution</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex justify-between">
+                  <span>Total Supply:</span>
+                  <span className="text-blue-400 font-bold">1,000,000,000 ELON</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Liquidity Pool:</span>
+                  <span className="text-green-400">80%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Development:</span>
+                  <span className="text-yellow-400">10%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Marketing:</span>
+                  <span className="text-purple-400">5%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Team:</span>
+                  <span className="text-red-400">5%</span>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800/50 border-blue-500/30">
+              <CardHeader>
+                <CardTitle className="text-blue-400">Token Utility</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span>AI Companion Access</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span>Governance Voting Rights</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span>Premium Features Unlock</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span>Staking Rewards</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span>Community Events Access</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Roadmap Section */}
+        <section className="w-full max-w-6xl mx-auto mb-20 px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            <span className="text-blue-400">Roadmap</span>
+          </h2>
+          <div className="space-y-8">
+            <Card className="bg-slate-800/50 border-green-500/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                  Phase 1: Launch (Q1 2024) - COMPLETED
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Token Launch on Base Network</li>
+                  <li>• Initial Liquidity Pool Creation</li>
+                  <li>• Community Building</li>
+                  <li>• Basic AI Companion Features</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/50 border-blue-500/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
+                  Phase 2: Enhancement (Q2 2024) - IN PROGRESS
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Advanced AI Capabilities</li>
+                  <li>• Mobile App Development</li>
+                  <li>• Partnership Announcements</li>
+                  <li>• Staking Platform Launch</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/50 border-yellow-500/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
+                  Phase 3: Expansion (Q3 2024) - UPCOMING
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Multi-chain Integration</li>
+                  <li>• NFT Collection Launch</li>
+                  <li>• DAO Governance Implementation</li>
+                  <li>• Launch DEX</li>
+                  <li>• Enterprise Partnerships</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/50 border-purple-500/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
+                  Phase 4: Revolution (Q4 2024) - PLANNED
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• AI Marketplace Launch</li>
+                  <li>• Global Marketing Campaign</li>
+                  <li>• Major Exchange Listings (CEX)</li>
+                  <li>• Metaverse Integration</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Join Community Section */}
+        <section className="w-full max-w-6xl mx-auto mb-20 px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Join Our <span className="text-blue-400">Community</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Connect with fellow enthusiasts and stay updated on the latest news and developments.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40 flex items-center gap-2"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 9.728-.896 9.728-.384 3.24-1.43 3.802-2.337 3.963-.77.136-1.355-.52-2.124-1.08-.359-.26-6.202-3.924-6.202-3.924s-.715-.446-.78-1.402c-.078-1.148.715-1.749.715-1.749s5.818-5.396 5.818-5.396s.39-.312.39-.624c0-.312-.39-.624-.39-.624s-6.169 4.624-6.169 4.624-.78.52-2.337.078c-1.557-.442-3.37-1.04-3.37-1.04s-1.245-.78.884-1.612c0 0 10.884-4.368 14.821-5.564 1.687-.52 2.337.26 2.337.26z" />
+              </svg>
+              Join Telegram
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-gray-600 text-white hover:bg-gray-800 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-transparent flex items-center gap-2"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              Follow Twitter
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer message */}
+        <div className="text-center pb-8">
+          {" "}
+          {/* Added padding-bottom for spacing */}
+          <h4 className="text-xl md:text-2xl font-semibold text-blue-400 mb-4">
+            Welcome to the Future of AI Companionship
+          </h4>
+          <p className="text-sm text-gray-400 max-w-2xl mx-auto mb-2">
+            Join the revolution where artificial intelligence meets blockchain technology. Built by innovators, for the
+            next generation of digital interaction.
+          </p>
+          <p className="text-xs text-gray-500">
+            &copy; {new Date().getFullYear()} Elon Grok Companion. All rights reserved.
+          </p>
         </div>
-      </section>
-
-      {/* Connect Section */}
-      <section id="socials" className="py-16 sm:py-24 lg:py-32 px-4 relative">
-        <ParallaxSection speed={0.1}>
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-        </ParallaxSection>
-
-        <div className="container mx-auto max-w-5xl text-center relative z-10">
-          <ScrollAnimation>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12 sm:mb-16 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
-              CONNECT TO THE SYSTEM
-            </h2>
-          </ScrollAnimation>
-
-          <ScrollAnimation delay={300}>
-            <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-12 sm:mb-16 max-w-2xl mx-auto">
-              {[
-                {
-                  name: "TELEGRAM",
-                  href: "https://t.me/basedjarviscompanions",
-                  hoverColor: "hover:from-blue-500 hover:to-blue-600",
-                },
-                {
-                  name: "TWITTER",
-                  href: "https://x.com/base_jarvis",
-                  hoverColor: "hover:from-blue-400 hover:to-blue-500",
-                },
-              ].map((social, index) => (
-                <ScrollAnimation key={social.name} delay={index * 100}>
-                  <InteractiveButton
-                    className={`bg-gradient-to-r from-gray-800 to-gray-700 ${social.hoverColor} text-white border-0 p-6 sm:p-8 text-base sm:text-lg lg:text-xl font-bold w-full transition-all duration-300 group`}
-                    href={social.href}
-                  >
-                    <div className="flex items-center justify-center">
-                      <span className="text-center font-bold tracking-wider text-xl sm:text-2xl lg:text-3xl">
-                        {social.name}
-                      </span>
-                    </div>
-                  </InteractiveButton>
-                </ScrollAnimation>
-              ))}
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation delay={600}>
-            <div className="border-t border-gray-800 pt-6 sm:pt-8">
-              <p className="text-lg sm:text-xl text-gray-400">© 2025 JARVIS - The Future is Now</p>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
-      <style jsx global>{`
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
+      </div>
     </div>
   )
 }
