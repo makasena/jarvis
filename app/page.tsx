@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { CheckCircleIcon, RocketIcon, UsersIcon, SendIcon, TwitterIcon } from "lucide-react" // Added SendIcon and TwitterIcon
+import { CheckCircleIcon, RocketIcon, UsersIcon, SendIcon, TwitterIcon, ShoppingCartIcon } from "lucide-react" // Added ShoppingCartIcon
 
 export default function Component() {
   return (
@@ -8,7 +8,7 @@ export default function Component() {
       <header className="sticky top-0 z-50 w-full bg-blue-900/80 backdrop-blur-sm py-3 px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image src="/images/tanuki-logo.png" alt="Tanuki Logo" width={40} height={40} className="rounded-full" />
-          <span className="text-xl font-bold text-white">TANUKI</span>
+          <span className="text-xl font-bold text-white">TANUKI ON BASE</span> {/* Updated name */}
         </div>
         {/* You can add navigation links here if needed */}
       </header>
@@ -25,8 +25,10 @@ export default function Component() {
         />
         <div className="relative z-10 space-y-4 p-4 backdrop-blur-sm bg-black/30 rounded-lg">
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-lg">
-            TANUKI
-          </h1>
+            TANUKI ON BASE
+          </h1>{" "}
+          {/* Updated name */}
+          <p className="text-3xl font-bold text-cyan-300 drop-shadow-md">$TANUKI</p> {/* Added ticker */}
           <p className="text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl max-w-3xl mx-auto drop-shadow-md">
             A yokai from ancient Japan. A meme from the edge of the world. A spirit of chaos, luck, and laughter, now
             on-chain.
@@ -183,10 +185,30 @@ export default function Component() {
         </div>
       </section>
 
+      {/* Buy $TANUKI Section */}
+      <section className="py-16 px-4 md:py-24 lg:py-32 bg-white text-gray-800 text-center">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-4xl font-bold sm:text-5xl md:text-6xl text-blue-600">Buy $TANUKI</h2>
+          <p className="text-lg md:text-xl mb-12">Ready to join the Tanuki family? Get your $TANUKI tokens now!</p>
+          <a
+            href="https://apester.com/your-tanuki-store-link" // Placeholder link, replace with actual Ape Store link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 rounded-full bg-blue-600 px-10 py-5 text-xl font-semibold text-white shadow-lg transition-colors hover:bg-blue-700"
+          >
+            <ShoppingCartIcon className="h-7 w-7" />
+            BUY TANOKI ON APE STORE
+          </a>
+          <p className="mt-8 text-sm text-gray-600">
+            (Note: This is a placeholder link. Please replace with the actual link to buy $TANUKI.)
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-blue-900 py-8 text-center text-gray-300">
         <div className="container mx-auto">
-          <p>&copy; {new Date().getFullYear()} TANUKI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TANUKI ON BASE. All rights reserved.</p> {/* Updated name */}
         </div>
       </footer>
     </div>
