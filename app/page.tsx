@@ -6,7 +6,7 @@ import { ExternalLink, Rocket, Brain, Shield, Zap, Users, Target } from "lucide-
 
 export default function ElonGrokCompanion() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Animated background stars */}
       <div className="absolute inset-0">
         <div className="stars"></div>
@@ -78,7 +78,7 @@ export default function ElonGrokCompanion() {
             About <span className="text-blue-400">Elon Grok</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-slate-800/50 border-blue-500/30">
+            <Card className="bg-black/50 border-blue-500/30">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-blue-400">
                   <Brain className="w-6 h-6" />
@@ -92,7 +92,7 @@ export default function ElonGrokCompanion() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-slate-800/50 border-blue-500/30">
+            <Card className="bg-black/50 border-blue-500/30">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-blue-400">
                   <Shield className="w-6 h-6" />
@@ -115,7 +115,7 @@ export default function ElonGrokCompanion() {
             Key <span className="text-blue-400">Features</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-slate-800/50 border-blue-500/30 text-center">
+            <Card className="bg-black/50 border-blue-500/30 text-center">
               <CardHeader>
                 <Zap className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <CardTitle className="text-blue-400">Lightning Fast</CardTitle>
@@ -126,7 +126,7 @@ export default function ElonGrokCompanion() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-slate-800/50 border-blue-500/30 text-center">
+            <Card className="bg-black/50 border-blue-500/30 text-center">
               <CardHeader>
                 <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <CardTitle className="text-blue-400">Community Driven</CardTitle>
@@ -137,7 +137,7 @@ export default function ElonGrokCompanion() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-slate-800/50 border-blue-500/30 text-center">
+            <Card className="bg-black/50 border-blue-500/30 text-center">
               <CardHeader>
                 <Target className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <CardTitle className="text-blue-400">Mission Focused</CardTitle>
@@ -158,7 +158,7 @@ export default function ElonGrokCompanion() {
             <span className="text-blue-400">Tokenomics</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-slate-800/50 border-blue-500/30">
+            <Card className="bg-black/50 border-blue-500/30">
               <CardHeader>
                 <CardTitle className="text-blue-400">Token Distribution</CardTitle>
               </CardHeader>
@@ -169,23 +169,23 @@ export default function ElonGrokCompanion() {
                 </div>
                 <div className="flex justify-between">
                   <span>Liquidity Pool:</span>
-                  <span className="text-green-400">80%</span>
+                  <span className="text-blue-400">80%</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Development:</span>
-                  <span className="text-yellow-400">10%</span>
+                  <span className="text-blue-400">10%</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Marketing:</span>
-                  <span className="text-purple-400">5%</span>
+                  <span className="text-blue-400">5%</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Team:</span>
-                  <span className="text-red-400">5%</span>
+                  <span className="text-blue-400">5%</span>
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-slate-800/50 border-blue-500/30">
+            <Card className="bg-black/50 border-blue-500/30">
               <CardHeader>
                 <CardTitle className="text-blue-400">Token Utility</CardTitle>
               </CardHeader>
@@ -221,10 +221,10 @@ export default function ElonGrokCompanion() {
             <span className="text-blue-400">Roadmap</span>
           </h2>
           <div className="space-y-8">
-            <Card className="bg-slate-800/50 border-green-500/50">
+            <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                  <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
                   Phase 1: Launch (Q1 2024) - COMPLETED
                 </CardTitle>
               </CardHeader>
@@ -238,7 +238,7 @@ export default function ElonGrokCompanion() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-blue-500/50">
+            <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
@@ -255,10 +255,10 @@ export default function ElonGrokCompanion() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-yellow-500/50">
+            <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
+                  <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
                   Phase 3: Expansion (Q3 2024) - UPCOMING
                 </CardTitle>
               </CardHeader>
@@ -273,10 +273,10 @@ export default function ElonGrokCompanion() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/50">
+            <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
+                  <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
                   Phase 4: Revolution (Q4 2024) - PLANNED
                 </CardTitle>
               </CardHeader>
@@ -313,7 +313,7 @@ export default function ElonGrokCompanion() {
             <Button
               variant="outline"
               size="lg"
-              className="border-gray-600 text-white hover:bg-gray-800 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-transparent flex items-center gap-2"
+              className="border-white text-white hover:bg-blue-900 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-transparent flex items-center gap-2"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -325,16 +325,14 @@ export default function ElonGrokCompanion() {
 
         {/* Footer message */}
         <div className="text-center pb-8">
-          {" "}
-          {/* Added padding-bottom for spacing */}
           <h4 className="text-xl md:text-2xl font-semibold text-blue-400 mb-4">
             Welcome to the Future of AI Companionship
           </h4>
-          <p className="text-sm text-gray-400 max-w-2xl mx-auto mb-2">
+          <p className="text-sm text-gray-300 max-w-2xl mx-auto mb-2">
             Join the revolution where artificial intelligence meets blockchain technology. Built by innovators, for the
             next generation of digital interaction.
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             &copy; {new Date().getFullYear()} Elon Grok Companion. All rights reserved.
           </p>
         </div>
