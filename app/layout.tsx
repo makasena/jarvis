@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "JARVIS - Grok Companions | The Future is Now",
+  title: "BASED JARVIS",
   description:
     "Where AI Companions Meet Blockchain Innovation. Join the JARVIS ecosystem inspired by Grok's AI companions system.",
   keywords: "JARVIS, Grok, AI Companions, Blockchain, Cryptocurrency, Elon Musk, xAI",
@@ -15,15 +15,15 @@ export const metadata: Metadata = {
   publisher: "JARVIS",
   robots: "index, follow",
   openGraph: {
-    title: "JARVIS - Grok Companions",
+    title: "BASED JARVIS",
     description: "Where AI Companions Meet Blockchain Innovation",
     type: "website",
     locale: "en_US",
-    siteName: "JARVIS",
+    siteName: "BASED JARVIS",
   },
   twitter: {
     card: "summary_large_image",
-    title: "JARVIS - Grok Companions",
+    title: "BASED JARVIS",
     description: "Where AI Companions Meet Blockchain Innovation",
     creator: "@jarvis",
   },
