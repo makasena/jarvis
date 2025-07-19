@@ -1,5 +1,14 @@
 import Image from "next/image"
-import { CheckCircleIcon, RocketIcon, UsersIcon, SendIcon, TwitterIcon, ShoppingCartIcon } from "lucide-react" // Added ShoppingCartIcon
+import { CheckCircleIcon, RocketIcon, UsersIcon, SendIcon, TwitterIcon, ShoppingCartIcon } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "TANUKI ON BASE", // Updated web page title
+  description: "A mythical meme tanuki, a spirit of chaos, luck, and laughter, now on-chain.", // Optional: Add a description
+  icons: {
+    icon: "/images/tanuki-logo.png", // Updated favicon path
+  },
+}
 
 export default function Component() {
   return (
@@ -8,7 +17,7 @@ export default function Component() {
       <header className="sticky top-0 z-50 w-full bg-blue-900/80 backdrop-blur-sm py-3 px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image src="/images/tanuki-logo.png" alt="Tanuki Logo" width={40} height={40} className="rounded-full" />
-          <span className="text-xl font-bold text-white">TANUKI ON BASE</span> {/* Updated name */}
+          <span className="text-xl font-bold text-white">TANUKI ON BASE</span>
         </div>
         {/* You can add navigation links here if needed */}
       </header>
@@ -26,9 +35,8 @@ export default function Component() {
         <div className="relative z-10 space-y-4 p-4 backdrop-blur-sm bg-black/30 rounded-lg">
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-lg">
             TANUKI ON BASE
-          </h1>{" "}
-          {/* Updated name */}
-          <p className="text-3xl font-bold text-cyan-300 drop-shadow-md">$TANUKI</p> {/* Added ticker */}
+          </h1>
+          <p className="text-3xl font-bold text-cyan-300 drop-shadow-md">$TANUKI</p>
           <p className="text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl max-w-3xl mx-auto drop-shadow-md">
             A yokai from ancient Japan. A meme from the edge of the world. A spirit of chaos, luck, and laughter, now
             on-chain.
@@ -164,7 +172,7 @@ export default function Component() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a
-              href="https://t.me/yourtelegramlink" // Replace with actual Telegram link
+              href="https://t.me/tanukionbase"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-semibold text-blue-600 shadow-lg transition-colors hover:bg-gray-100"
@@ -173,7 +181,7 @@ export default function Component() {
               Telegram
             </a>
             <a
-              href="https://twitter.com/yourtwitterlink" // Replace with actual Twitter link
+              href="https://x.com/tanukionbase"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-semibold text-blue-600 shadow-lg transition-colors hover:bg-gray-100"
@@ -208,7 +216,7 @@ export default function Component() {
       {/* Footer */}
       <footer className="bg-blue-900 py-8 text-center text-gray-300">
         <div className="container mx-auto">
-          <p>&copy; {new Date().getFullYear()} TANUKI ON BASE. All rights reserved.</p> {/* Updated name */}
+          <p>&copy; {new Date().getFullYear()} TANUKI ON BASE. All rights reserved.</p>
         </div>
       </footer>
     </div>
