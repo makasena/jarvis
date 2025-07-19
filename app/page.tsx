@@ -47,7 +47,9 @@ export default function ElonGrokCompanion() {
         </p>
 
         {/* Action buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 mb-16 items-center">
+          {" "}
+          {/* Added items-center for centering */}
           <Button
             size="lg"
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40"
@@ -56,6 +58,7 @@ export default function ElonGrokCompanion() {
             BUY ON APE STORE
             <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
+          <p className="text-white text-sm mt-2">CA : COOMING SOON</p> {/* Added the new text */}
         </div>
 
         {/* Hero Banner */}
@@ -223,9 +226,9 @@ export default function ElonGrokCompanion() {
           <div className="space-y-8">
             <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-white">
                   <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-                  Phase 1: Launch (Q1 2024) - COMPLETED
+                  Phase 1: Launch (Q1 2025) - COMPLETED
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -240,9 +243,9 @@ export default function ElonGrokCompanion() {
 
             <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-white">
                   <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
-                  Phase 2: Enhancement (Q2 2024) - IN PROGRESS
+                  Phase 2: Enhancement (Q2 2025) - IN PROGRESS
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -257,9 +260,9 @@ export default function ElonGrokCompanion() {
 
             <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-white">
                   <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-                  Phase 3: Expansion (Q3 2024) - UPCOMING
+                  Phase 3: Expansion (Q3 2025) - UPCOMING
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -275,9 +278,9 @@ export default function ElonGrokCompanion() {
 
             <Card className="bg-black/50 border-blue-500/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-white">
                   <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-                  Phase 4: Revolution (Q4 2024) - PLANNED
+                  Phase 4: Revolution (Q4 2025) - PLANNED
                 </CardTitle>
               </CardHeader>
               <CardContent>
