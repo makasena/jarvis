@@ -239,9 +239,7 @@ export default function JarvisCompanions() {
                       </h2>
                       <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">TOKENOMICS</h3>
                       <div className="bg-gray-800 p-3 sm:p-4 rounded-lg">
-                        <p className="text-cyan-400 text-xs sm:text-sm font-mono break-all">
-                          @X-2ECCFEADAI4-G1S6B8D678CEECA8238C864-5516
-                        </p>
+                        <p className="text-cyan-400 text-xs sm:text-sm font-mono break-all">COMING SOON</p>
                       </div>
                     </div>
                     <InteractiveButton className="bg-white text-black hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold w-full sm:w-auto">
