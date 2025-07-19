@@ -50,15 +50,22 @@ export default function ElonGrokCompanion() {
         <div className="flex flex-col sm:flex-row gap-4 mb-16 items-center">
           {" "}
           {/* Added items-center for centering */}
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40"
+          <a
+            href="https://ape.store/base/0x296fa4db85433ed0e9cf9891f114e601a98dfa68"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Rocket className="w-5 h-5 mr-2" />
-            BUY ON APE STORE
-            <ExternalLink className="w-4 h-4 ml-2" />
-          </Button>
-          <p className="text-white text-sm mt-2">CA : COOMING SOON</p> {/* Added the new text */}
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40"
+            >
+              <Rocket className="w-5 h-5 mr-2" />
+              BUY ON APE STORE
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </a>
+          <p className="text-white text-sm mt-2">CA : 0x296fa4db85433ed0e9cf9891f114e601a98dfa68</p>{" "}
+          {/* Updated the text */}
         </div>
 
         {/* Hero Banner */}
