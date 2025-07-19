@@ -164,24 +164,24 @@ export default function ElonGrokCompanion() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex justify-between">
-                  <span>Total Supply:</span>
-                  <span className="text-blue-400 font-bold">1,000,000,000 ELON</span>
+                  <span className="text-white">Total Supply:</span>
+                  <span className="text-white font-bold">1,000,000,000 ELON</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Liquidity Pool:</span>
-                  <span className="text-blue-400">80%</span>
+                  <span className="text-white">Liquidity Pool:</span>
+                  <span className="text-white">80%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Development:</span>
-                  <span className="text-blue-400">10%</span>
+                  <span className="text-white">Development:</span>
+                  <span className="text-white">10%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Marketing:</span>
-                  <span className="text-blue-400">5%</span>
+                  <span className="text-white">Marketing:</span>
+                  <span className="text-white">5%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Team:</span>
-                  <span className="text-blue-400">5%</span>
+                  <span className="text-white">Team:</span>
+                  <span className="text-white">5%</span>
                 </div>
               </CardContent>
             </Card>
@@ -192,23 +192,23 @@ export default function ElonGrokCompanion() {
               <CardContent className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span>AI Companion Access</span>
+                  <span className="text-white">AI Companion Access</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span>Governance Voting Rights</span>
+                  <span className="text-white">Governance Voting Rights</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span>Premium Features Unlock</span>
+                  <span className="text-white">Premium Features Unlock</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span>Staking Rewards</span>
+                  <span className="text-white">Staking Rewards</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span>Community Events Access</span>
+                  <span className="text-white">Community Events Access</span>
                 </div>
               </CardContent>
             </Card>
@@ -301,25 +301,28 @@ export default function ElonGrokCompanion() {
             Connect with fellow enthusiasts and stay updated on the latest news and developments.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40 flex items-center gap-2"
+            <a
+              href="https://t.me/eloncompanion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 9.728-.896 9.728-.384 3.24-1.43 3.802-2.337 3.963-.77.136-1.355-.52-2.124-1.08-.359-.26-6.202-3.924-6.202-3.924s-.715-.446-.78-1.402c-.078-1.148.715-1.749.715-1.749s5.818-5.396 5.818-5.396s.39-.312.39-.624c0-.312-.39-.624-.39-.624s-6.169 4.624-6.169 4.624-.78.52-2.337.078c-1.557-.442-3.37-1.04-3.37-1.04s-1.245-.78.884-1.612c0 0 10.884-4.368 14.821-5.564 1.687-.52 2.337.26 2.337.26z" />
               </svg>
               Join Telegram
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-blue-900 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-transparent flex items-center gap-2"
+            </a>
+            <a
+              href="https://x.com/companionelon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border-white text-white hover:bg-blue-900 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-transparent border"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
               Follow Twitter
-            </Button>
+            </a>
           </div>
         </section>
 
