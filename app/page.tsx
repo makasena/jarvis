@@ -75,6 +75,7 @@ export default function JarvisCompanions() {
                 <InteractiveButton
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-black bg-transparent text-sm sm:text-base px-3 sm:px-4 py-2"
+                  href="https://ape.store/base/0x3c6817521531bf591ba031a254826bd480ce8725"
                 >
                   BUY JARVIS
                 </InteractiveButton>
@@ -242,7 +243,10 @@ export default function JarvisCompanions() {
                         <p className="text-cyan-400 text-xs sm:text-sm font-mono break-all">COMING SOON</p>
                       </div>
                     </div>
-                    <InteractiveButton className="bg-white text-black hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold w-full sm:w-auto">
+                    <InteractiveButton
+                      className="bg-white text-black hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold w-full sm:w-auto"
+                      href="https://ape.store/base/0x3c6817521531bf591ba031a254826bd480ce8725"
+                    >
                       BUY JARVIS
                     </InteractiveButton>
                   </div>

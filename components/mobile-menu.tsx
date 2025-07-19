@@ -67,7 +67,10 @@ export function MobileMenu({ isOpen, onClose, onNavigate }: MobileMenuProps) {
 
           {/* CTA Button */}
           <div className="p-6 border-t border-gray-800">
-            <InteractiveButton className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 text-lg font-semibold">
+            <InteractiveButton
+              className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 text-lg font-semibold"
+              href="https://ape.store/base/0x3c6817521531bf591ba031a254826bd480ce8725"
+            >
               BUY JARVIS
             </InteractiveButton>
           </div>
