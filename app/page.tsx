@@ -402,12 +402,12 @@ export default function JarvisCompanions() {
               {[
                 {
                   name: "TELEGRAM",
-                  href: "#",
+                  href: "https://t.me/basedjarviscompanions",
                   hoverColor: "hover:from-blue-500 hover:to-blue-600",
                 },
                 {
                   name: "TWITTER",
-                  href: "#",
+                  href: "https://x.com/base_jarvis",
                   hoverColor: "hover:from-blue-400 hover:to-blue-500",
                 },
               ].map((social, index) => (
